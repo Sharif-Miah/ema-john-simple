@@ -3,7 +3,7 @@ import './Cart.css'
 
 const Cart = ({ cart }) => {
 
-    console.log(cart);
+    // console.log(cart);
 
     let total = 0;
     let shipping = 0;
@@ -11,8 +11,9 @@ const Cart = ({ cart }) => {
         total = total + product.price
         shipping = shipping + product.shipping
     }
+    const tax = parseFloat((total * 0.1).toFixed(2));
 
-    const tax = (total * 0.1).toFixed(2);
+    const grandTotal = total + shipping + tax;
 
     return (
         <div className='cart'>
@@ -22,7 +23,7 @@ const Cart = ({ cart }) => {
                 <p>Total Price: ${total}</p>
                 <p>Total Shipping Charge: ${shipping} </p>
                 <p>Tax: ${tax} </p>
-                <h3>Grand Total: $</h3>
+                <h3>Grand Total: ${grandTotal}</h3>
             </div>
         </div>
     );
