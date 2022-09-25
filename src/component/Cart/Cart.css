@@ -1,0 +1,17 @@
+.cart {
+    position: sticky;
+    top: 0;
+
+}
+
+.order-summary {
+    font-size: 25px;
+    margin-top: 28px;
+    margin-left: 45px;
+}
+
+.cart-text-right {
+    margin-top: 108px;
+    font-size: 20px;
+    margin-left: 23px;
+}
