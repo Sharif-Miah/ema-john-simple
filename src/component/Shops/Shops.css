@@ -16,3 +16,10 @@
 .cart-container {
     background-color: rgba(255, 202, 124, 1);
 }
+
+
+@media screen and (max-width: 576px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+}
