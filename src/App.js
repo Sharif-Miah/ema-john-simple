@@ -21,6 +21,7 @@ function App() {
         },
         {
           path: 'shop',
+          loader: () => fetch('products.json'),
           element: <Shop />
         },
         {
