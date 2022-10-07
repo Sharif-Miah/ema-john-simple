@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const Order = () => {
     const order = useLoaderData();
-    console.log(order);
+    // console.log(order);
     return (
         <div>
             <h1>This is Order component section {order.length}</h1>
