@@ -2,15 +2,17 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+
 import { addToDb, getStoreCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shops.css';
 
 const Shops = () => {
-
     const products = useLoaderData();
+
     const [cart, setCart] = useState([])
+
 
     useEffect(() => {
         const storeCart = getStoreCart();
