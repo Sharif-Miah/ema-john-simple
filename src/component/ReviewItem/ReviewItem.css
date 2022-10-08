@@ -2,8 +2,9 @@
     display: flex;
     border: 1px solid #95A0A7;
     width: 571px;
-    margin: 24px;
+    margin: 24px auto;
     padding: 7px;
+    border-radius: 8px;
 }
 
 .review-container img {

@@ -2,9 +2,9 @@ import React from 'react';
 import './ReviewItem.css'
 import { TrashIcon } from '@heroicons/react/24/solid'
 
-const ReviewItem = ({ product }) => {
-    console.log(product);
-    const { name, price, shipping, img, quantity } = product;
+const ReviewItem = ({ product, handleRemoveItem }) => {
+    // console.log(product);
+    const { id, name, price, shipping, img, quantity } = product;
     return (
         <div className='review-container'>
             <img src={img} alt="" />
@@ -18,7 +18,7 @@ const ReviewItem = ({ product }) => {
                 </div>
                 <div className='delate-btn'>
 
-                    <button>
+                    <button onClick={() => handleRemoveItem(id)}>
                         <TrashIcon />
                     </button>
 
