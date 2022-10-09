@@ -25,8 +25,8 @@ const Shops = () => {
         for (const id in storeCart) {
             const addedProduct = products.find(product => product.id === id)
             if (addedProduct) {
-                const quentity = storeCart[id];
-                addedProduct.quentity = quentity;
+                const quantity = storeCart[id];
+                addedProduct.quantity = quantity;
                 saveCart.push(addedProduct)
             }
         }
@@ -38,11 +38,11 @@ const Shops = () => {
         let newCart = []
         const exists = cart.find(otherProduct => otherProduct.id === product.id)
         if (!exists) {
-            product.quentity = 1;
+            product.quantity = 1;
             newCart = [...cart, product]
         } else {
             const rest = cart.filter(otherProduct => otherProduct.id !== product.id);
-            exists.quentity = exists.quentity + 1;
+            exists.quantity = exists.quantity + 1;
             newCart = [...rest, exists]
         }
 

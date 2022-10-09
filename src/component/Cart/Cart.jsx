@@ -7,11 +7,11 @@ const Cart = ({ cart, clearCart }) => {
 
     let total = 0;
     let shipping = 0;
-    let quentity = 0;
+    let quantity = 0;
     for (const product of cart) {
-        quentity = quentity + product.quentity;
-        console.log(quentity);
-        total = total + product.price * product.quentity;
+        quantity = quantity + product.quantity;
+        console.log(quantity);
+        total = total + product.price * product.quantity;
         shipping = shipping + product.shipping;
     }
     const tax = parseFloat((total * 0.1).toFixed(2));
@@ -22,7 +22,7 @@ const Cart = ({ cart, clearCart }) => {
         <div className='cart'>
             <h3 className='order-summary'>Order Summary:</h3>
             <div className='cart-text-right'>
-                <p>Selected Items: {quentity}</p>
+                <p>Selected Items: {quantity}</p>
                 <p>Total Price: ${total}</p>
                 <p>Total Shipping Charge: ${shipping} </p>
                 <p>Tax: ${tax} </p>
