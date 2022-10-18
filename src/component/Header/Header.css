@@ -18,3 +18,15 @@
 .menu-link a:hover {
     color: #FF9900;
 }
+
+.logout {
+    margin-left: 18px;
+    border: none;
+    background-color: red;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
